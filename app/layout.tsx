@@ -1,5 +1,6 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import React from "react";
+import { ClerkProvider } from "@clerk/nextjs";
+
 
 import { Inter, Space_Grotesk } from "next/font/google";
 
@@ -36,13 +37,13 @@ export default function RootLayout({
     <ClerkProvider
       appearance={{
         elements: {
-          formButtonPrimary: "primary-gradient",
-          footerActionLink: "primary-text-gradient hover:text-primary",
-        },
+          formButtonPrimary: 'primary-gradient',
+          footerActionLink:
+          'primary-text-gradient hover:text-primary-500'
+        }
       }}
-    >
+      >
       <html lang="en">
-        <h1 className="h1-bold">this is a piece of text</h1>
         <body className={`${inter.variable} ${spaceGrotesk.variable}`}>
           {children}
         </body>
